@@ -1,0 +1,14 @@
+<h1>Hola mi amigo es Yamcha</h1>
+<hr />
+
+<section class="row">
+    <div class="col-12 col-sm-6">
+        <app-character-add [characters]="dragonballService.characters()" 
+        (characterAdded)="dragonballService.addCharacter($event)"/>
+    </div>
+
+    <div class="col-12 col-sm-6">
+        <app-character-list [listName]='"Listado de Personajes"' 
+        [characters]="dragonballService.characters()" />
+    </div>
+</section>
